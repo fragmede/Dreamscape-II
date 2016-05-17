@@ -1,6 +1,6 @@
 class LampPostBarIterator extends DLPattern
 {
-	private final BasicParameter num = new BasicParameter("num" ,0 ,0 ,7);
+	private final BasicParameter num = new BasicParameter("num" ,0 ,0 ,6);
 	private final SawLFO counter = new SawLFO(0, 6, 1000);
 
 	public LampPostBarIterator(LX lx)
