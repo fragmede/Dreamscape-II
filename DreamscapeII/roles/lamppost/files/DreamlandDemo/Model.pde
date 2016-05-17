@@ -26,9 +26,9 @@ public static class Model extends LXModel {
       // Build lamp posts
       for (int i = 0; i < NUMBER_OF_LAMPPOSTS; ++i) {
         LXTransform transform = new LXTransform();
-        float theta = radians(120) * i;
+        float theta = radians(180) * i;
         transform.push();
-        transform.rotateY(radians(120) * i);
+        transform.rotateY(radians(180) * i);
         transform.translate(LAMPPOST_RADIUS, 0, 0);
         LampPost lampPost = new LampPost(transform);
         addPoints(lampPost);
