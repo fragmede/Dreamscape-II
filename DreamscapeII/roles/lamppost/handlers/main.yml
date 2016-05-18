@@ -1,2 +1,6 @@
 ---
-# handlers file for lamppost
+# handlers file for roles/lamposts
+  - name: reread supervisord
+    shell: supervisorctl reread && supervisorctl update
+    become: True
+    become_user: root
