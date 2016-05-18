@@ -18,10 +18,5 @@ void buildOutputs()
   output.enabled.setValue(false);
   lx.addOutput(output);
   output.addChild(new DreamlandFadecandyOutput(lx, "pi8.local", 7890));  // lamppost 1
-  // output.addChild(new DreamlandFadecandyOutput(lx, "192.168.2.55", 7890));  // carousel bottom
-  // output.addChild(new DreamlandFadecandyOutput(lx, "192.168.2.59", 7890));  // lamppost 2
-  // output.addChild(new DreamlandFadecandyOutput(lx, "192.168.2.53", 7890));  // lamppost 3
-  // output.addChild(new DreamlandFadecandyOutput(lx, "192.168.2.57", 7890));
-  // output.addChild(new DreamlandFadecandyOutput(lx, "192.168.2.60", 7890));
-  // output.addChild(new DreamlandFadecandyOutput(lx, "192.168.2.54", 7890));
+  output.addChild(new DreamlandFadecandyOutput(lx, "pi16.local", 7890));  // lamppost 2
 }
