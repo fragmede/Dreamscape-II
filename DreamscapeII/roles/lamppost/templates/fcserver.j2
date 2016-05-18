@@ -1,0 +1,6 @@
+[program:fcserver]
+command=/usr/local/bin/fcserver {{folderPath}}/fcserver.json
+autostart=true
+autorestart=true
+startretries=10
+logfile=/var/log/fcserver.log
