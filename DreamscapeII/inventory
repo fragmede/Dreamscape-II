@@ -1,5 +1,12 @@
 [lamppost1]
-pi8.local
+10.0.0.10
 
-[lamposts2]
+[lamppost2]
 #placeholder
+
+[lampposts:children]
+lamppost1
+lamppost2
+
+[lampposts:vars]
+folderPath=/etc/dreamscape
