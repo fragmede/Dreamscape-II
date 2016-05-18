@@ -1,2 +1,29 @@
 ---
 # tasks file for lamppost
+- name: Creates directory
+  become: True
+  file: 
+    path: '{{folderPath}}'
+    state: directory
+
+- name: sync fcserver config
+  become: True
+  synchronize:
+    src: "../files/fcserver.json"
+    dest: "{{folderPath}}/fcserver.json"
+
+- name: copy processing sketch
+  become: True
+  synchronize:
+    src: "../files/DreamlandDemo/"
+    dest: "{{folderPath}}/DreamlandDemo"
+
+- name: Create fcserver supervisor conf and restart supervisor if needed
+  become: True
+  template: 
+    src: fcserver.j2
+    dest: "/etc/supervisor/conf.d/fcserver.conf" 
+    group: root
+    owner: root
+  notify: 
+    - reread supervisord
